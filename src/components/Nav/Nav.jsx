@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import RootLayout from "./Layout";
+import RootLayout from "../Layout";
 import { Outlet } from "react-router-dom";
 
 export default function Nav() {
@@ -11,7 +11,7 @@ export default function Nav() {
     { name: "Contact", link: "/contact" },
   ];
   return (
-    <div className="body">
+    <div>
       <div className=" w-full top-0 left-0  bg-white dark:bg-slate-900 duration-500">
         <div className="md:flex items-center justify-between   py-4 md:px-10 px-7">
           <div

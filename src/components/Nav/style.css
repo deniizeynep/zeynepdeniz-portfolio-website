@@ -1,0 +1,14 @@
+/* CSS */
+@layer components {
+  .btn {
+    @apply bg-white text-white;
+  }
+}
+
+@layer utilities {
+  @variants dark {
+    .btn {
+      @apply dark:bg-slate-900 dark:text-black;
+    }
+  }
+}

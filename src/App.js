@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import HomePage from "./pages/Home/HomePage.jsx";
-import Nav from "./components/Nav.jsx";
+import Nav from "./components/Nav/Nav.jsx";
 
 const App = () => {
   return (
