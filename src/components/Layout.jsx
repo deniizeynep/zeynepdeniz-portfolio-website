@@ -4,16 +4,19 @@ import React from "react";
 import "../output.css";
 import "../input.css";
 
-import Moon from "./_icons/Moon.jsx";
-import Sun from "./_icons/Sun.jsx";
+import Moon from "./_icons/Moon";
+import Sun from "./_icons/Sun";
 
-export default function RootLayout() {
-  const [theme, setTheme] = useState("light");
+export default function RootLayout({ children }) {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, [theme]);
 
@@ -23,13 +26,14 @@ export default function RootLayout() {
 
   return (
     <div>
-      <div className="">
-        <button
-          className="w-16 h-16 bottom-8 right-10 p-4 rounded-3xl  "
-          onClick={toggleTheme}
-        >
+      <div className="fixed bottom-8 right-10">
+        <button className="w-16 h-16 p-4 rounded-3xl" onClick={toggleTheme}>
           {theme === "dark" ? <Moon /> : <Sun />}
         </button>
+      </div>
+
+      <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-500">
+        {children}
       </div>
     </div>
   );

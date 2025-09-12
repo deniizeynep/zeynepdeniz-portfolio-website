@@ -5,7 +5,13 @@ import Home from "../../components/Home/Home";
 export default function Homepage() {
   return (
     <>
-      <Home />
+      <Home
+        className={({ isActive }) =>
+          isActive
+            ? "text-slate-400 dark:text-slate-500"
+            : "text-black dark:text-white hover:text-slate-400 dark:hover:text-slate-500 duration-500"
+        }
+      />
     </>
   );
 }

@@ -4,6 +4,8 @@ import Nav from "./components/Nav/Nav.jsx";
 
 import HomePage from "./pages/Home/HomePage.jsx";
 import ContactPage from "./pages/Contact/ContactPage.jsx";
+import About from "./components/About/About.jsx";
+import Projects from "./components/Projects/Projects.jsx";
 
 const App = () => {
   return (
@@ -12,8 +14,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Nav />}>
             <Route index element={<HomePage />} />
-            <Route path="about" element={<div>About</div>} />
-            <Route path="projects" element={<div>projects</div>} />
+            <Route path="about" element={<About />} />
+            <Route path="projects" element={<Projects />} />
             <Route path="contact" element={<ContactPage/>} />
           </Route>
         </Routes>

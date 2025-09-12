@@ -8,7 +8,7 @@ module.exports = {
       'roboto': ['"Roboto Mono"', 'sans-serif'],
     },
     fontSize: {
-        '3xl': '1.553rem',
+        '3xl': '1.2rem',
         '4xl': '2.541rem',
       },
       fontWeight:{
