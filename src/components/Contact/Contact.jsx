@@ -34,7 +34,9 @@ export default function Contact() {
         </label>
         <div class="underline"></div>
       </div>
-      <button>Send Message</button>
+      <button class="sendBtn text-white dark:text-black bg-[#111827] dark:bg-gray-200 hover:bg-gray-800 dark:hover:bg-gray-300">
+        Send Message
+      </button>
     </div>
   );
 }

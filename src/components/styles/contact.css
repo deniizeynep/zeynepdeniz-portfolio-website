@@ -1,11 +1,11 @@
-.container{
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
-.title{
+.title {
   font-size: 30px;
   margin: 15px;
 }
@@ -30,35 +30,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: #ccc;
   transition: all 0.3s ease;
   pointer-events: none;
+}
+
+.underline {
+  width: 150px;
 }
 
 .input-container input[type="text"]:focus ~ .label,
 .input-container input[type="text"]:valid ~ .label {
   top: -20px;
-  font-size: 16px;
-  color: #807d7d;
 }
 
-.input-container .underline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #807d7d;
-  transform: scaleX(0);
+.sendBtn {
+  padding: 8px 25px;
+  border-radius: 12px;
+  font-weight: 600;
   transition: all 0.3s ease;
-}
-
-.input-container input[type="text"]:focus ~ .underline,
-.input-container input[type="text"]:valid ~ .underline {
-  transform: scaleX(1);
-}
-
-.button{
-  border: solid 2px black;
-  
 }

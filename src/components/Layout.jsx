@@ -6,6 +6,8 @@ import "../input.css";
 
 import Moon from "./_icons/Moon";
 import Sun from "./_icons/Sun";
+import Github from "./_icons/Github";
+import Linkedln from "./_icons/Linkedln";
 
 export default function RootLayout({ children }) {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -26,8 +28,27 @@ export default function RootLayout({ children }) {
 
   return (
     <div>
-      <div className="fixed bottom-8 right-10">
-        <button className="w-16 h-16 p-4 rounded-3xl" onClick={toggleTheme}>
+      <div className="fixed bottom-8 right-10 flex items-center space-x-6">
+        <div className="flex space-x-4 text-black dark:text-white items-center">
+          <a
+            href="https://github.com/deniizeynep"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/zeynep-deniz-931938209/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedln />
+          </a>
+        </div>
+        <button
+          className="w-5 h-16 p-2 flex items-center justify-center"
+          onClick={toggleTheme}
+        >
           {theme === "dark" ? <Moon /> : <Sun />}
         </button>
       </div>
