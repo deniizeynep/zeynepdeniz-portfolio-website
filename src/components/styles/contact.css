@@ -34,13 +34,14 @@
   pointer-events: none;
 }
 
-.underline {
-  width: 150px;
-}
-
 .input-container input[type="text"]:focus ~ .label,
 .input-container input[type="text"]:valid ~ .label {
   top: -20px;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
 }
 
 .sendBtn {

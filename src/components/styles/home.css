@@ -1,0 +1,57 @@
+.homeWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.homeContainer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(50px, 15vh, 250px);
+  padding: 0 10vh;
+}
+
+.homeTitle {
+  font-size: clamp(32px, 8vw, 85px);
+}
+
+.job {
+  font-size: clamp(24px, 5vw, 60px);
+  font-weight: bold;
+}
+
+.description {
+  font-size: clamp(14px, 2.5vw, 20px);
+  max-width: 900px;
+  margin-top: 30px;
+}
+
+.profilePhoto {
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 50%;
+  background-image: url("https://avatars.githubusercontent.com/u/109898313?v=4");
+  background-size: cover;
+  background-position: center;
+  margin: clamp(200px, 15vw, 270px) 0 0 clamp(50px, 10vw, 100px);
+}
+
+@media (max-width: 1300px) {
+  .homeWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profilePhoto {
+    margin-bottom: -100px;
+  }
+}
+
+.resumeBtn{
+    width: 300px;
+    height: 50px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
