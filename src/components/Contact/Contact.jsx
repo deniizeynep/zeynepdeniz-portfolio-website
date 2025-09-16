@@ -31,7 +31,7 @@ export default function Contact() {
     if (success) {
       const timer = setTimeout(() => {
         setSuccess("");
-      }, 10000000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [success]);

@@ -4,21 +4,15 @@ import "../styles/home.css";
 export default function Home() {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/ZeynepDenizResume.pdf"; 
-    link.setAttribute("download", "ZeynepDenizCV.pdf"); 
+    link.href = "/ZeynepDenizResume.pdf";
+    link.setAttribute("download", "ZeynepDenizCV.pdf");
     document.body.appendChild(link);
     link.click();
     link.remove();
   };
   return (
     <div className="homeWrapper text-black dark:text-white">
-      <div
-        className="profilePhoto"
-        style={{
-          backgroundImage:
-            "url('https://avatars.githubusercontent.com/u/109898313?v=4')",
-        }}
-      ></div>
+      <div className="profilePhoto"></div>
       <div className="homeContainer ">
         <h1 className="homeTitle">Hi! I'm Zeynep Deniz,</h1>
         <div className="job">Frontend Developer from Turkey</div>

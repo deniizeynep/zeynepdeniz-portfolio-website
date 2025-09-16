@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import RootLayout from "../Layout";
 import { NavLink, Outlet } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Layout from "../Layout";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,8 +78,8 @@ export default function Nav() {
               className="bg-white dark:bg-gray-800 p-8 w-80 h-full transform transition-transform duration-300 translate-x-0"
               onClick={(e) => e.stopPropagation()}
             >
-              <div>
-                <FaTimes className="text-black dark:text-white text-3xl hover:text-inherit" />
+              <div onClick={closeModal}>
+                <FaTimes className="text-black dark:text-white text-3xl hover:text-inherit cursor-pointer" />
               </div>
               <ul className="flex flex-col items-start space-y-4 mt-8 text-3xl">
                 {Links.map((link) => (
@@ -96,6 +97,7 @@ export default function Nav() {
                     </NavLink>
                   </li>
                 ))}
+                <Layout hideIconsOnMobile/>
               </ul>
             </div>
           </div>

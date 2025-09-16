@@ -9,7 +9,7 @@ import Sun from "./_icons/Sun";
 import Github from "./_icons/Github";
 import Linkedln from "./_icons/Linkedln";
 
-export default function RootLayout({ children }) {
+export default function Layout({ children, hideIconsOnMobile = false}) {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <div>
       <div className="fixed bottom-8 right-10 flex items-center space-x-6">
-        <div className="flex space-x-4 text-black dark:text-white items-center">
+        <div className={`${hideIconsOnMobile ? "flex" : "hidden md:flex"} space-x-4 text-black dark:text-white items-center`}>
           <a
             href="https://github.com/deniizeynep"
             target="_blank"

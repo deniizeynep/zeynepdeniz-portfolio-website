@@ -2,8 +2,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 20px;
-  padding: 0 10px;
+  padding: 0 30px;
 }
 
 .homeContainer {
@@ -15,28 +14,29 @@
 }
 
 .homeTitle {
-  font-size: clamp(32px, 8vw, 85px);
+  font-size: clamp(28px, 8vw, 75px);
 }
 
 .job {
-  font-size: clamp(24px, 5vw, 60px);
+  font-size: clamp(24px, 5vw, 40px);
   font-weight: bold;
 }
 
 .description {
-  font-size: clamp(14px, 2.5vw, 20px);
+  font-size: clamp(14px, 2.5vw, 16px);
   max-width: 900px;
   margin-top: 30px;
 }
 
 .profilePhoto {
-  min-width: 300px;
-  min-height: 300px;
+  min-width: 250px;
+  min-height: 250px;
   border-radius: 50%;
   background-image: url("https://avatars.githubusercontent.com/u/109898313?v=4");
   background-size: cover;
   background-position: center;
-  margin: clamp(200px, 15vw, 270px) 0 0 clamp(50px, 10vw, 100px);
+  margin-top: clamp(100px, 15vh, 300px);
+  margin-left: clamp(50px, 8vh, 250px);
 }
 
 @media (max-width: 1300px) {
@@ -45,13 +45,15 @@
     align-items: center;
   }
   .profilePhoto {
+    min-width: 200px;
+    min-height: 200px;
     margin-bottom: -100px;
   }
 }
 
-.resumeBtn{
-    width: 300px;
-    height: 50px;
-    margin-top: 40px;
-    border-radius: 10px;
+.resumeBtn {
+  width: 250px;
+  height: 40px;
+  margin-top: 40px;
+  border-radius: 10px;
 }
