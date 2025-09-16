@@ -50,3 +50,29 @@
   font-weight: 600;
   transition: all 0.3s ease;
 }
+
+.success {
+  position: relative;
+  background: #E9F5CE; 
+  color: #000;     
+  padding: 12px 40px 12px 16px;
+  border-radius: 8px;
+  margin-top: 40px;
+  font-weight: 500;
+  animation: fadeInOut 5s forwards;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 2px;
+  right: 13px;
+  background: transparent;
+  font-size: 30px;
+  font-weight: bold;
+  color: #065f46;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  color: #000;
+}
