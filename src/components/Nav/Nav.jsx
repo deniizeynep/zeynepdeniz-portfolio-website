@@ -25,17 +25,16 @@ export default function Nav() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+  const closeModal = () => setIsOpen(false);
 
   return (
     <RootLayout>
       <div className="w-full top-0 left-0 font-[Poppins]">
         <div className="md:flex items-center justify-between py-4 md:px-10 px-7">
-          <div className="font-500 text-4xl flex items-center text-black dark:text-white duration-500 ml-10">
+          <div className="font-500 text-4xl flex items-center text-black dark:text-white duration-500 ml-0 md:ml-10">
             Zeynep Deniz
           </div>
+
           {isMobile ? (
             <div
               className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden duration-300"
@@ -46,10 +45,7 @@ export default function Nav() {
           ) : (
             <ul className="md:flex md:items-center absolute md:static md:z-auto z-[-1] md:w-auto transition-all duration-500 ease-in">
               {Links.map((link) => (
-                <li
-                  key={link.name}
-                  className="text-3xl md:my-15 my-10 md:mr-16"
-                >
+                <li key={link.name} className="text-3xl md:my-15 my-10 md:mr-16">
                   <NavLink
                     to={link.link}
                     className={({ isActive }) =>
@@ -65,22 +61,34 @@ export default function Nav() {
             </ul>
           )}
         </div>
+
         <div className="main-content p-4">
           <Outlet />
         </div>
 
-        {isOpen && isMobile && (
+        {/* Mobil Menü */}
+        {isMobile && (
           <div
-            className="fixed inset-0 flex justify-end bg-black bg-opacity-50 z-50"
+            className={`fixed inset-0 z-50 flex justify-end transition-opacity duration-300 ${
+              isOpen
+                ? "opacity-100 bg-black bg-opacity-50 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
             onClick={closeModal}
           >
             <div
-              className="bg-white dark:bg-gray-800 p-8 w-80 h-full transform transition-transform duration-300 translate-x-0"
+              className={`bg-white dark:bg-gray-800 p-8 w-80 h-full transform transition-transform duration-300 ${
+                isOpen ? "translate-x-0" : "translate-x-full"
+              }`}
               onClick={(e) => e.stopPropagation()}
             >
-              <div onClick={closeModal}>
-                <FaTimes className="text-black dark:text-white text-3xl hover:text-inherit cursor-pointer" />
+              <div className="flex justify-end">
+                <FaTimes
+                  className="text-black dark:text-white text-3xl cursor-pointer"
+                  onClick={closeModal}
+                />
               </div>
+
               <ul className="flex flex-col items-start space-y-4 mt-8 text-3xl">
                 {Links.map((link) => (
                   <li key={link.name}>
@@ -97,7 +105,7 @@ export default function Nav() {
                     </NavLink>
                   </li>
                 ))}
-                <Layout hideIconsOnMobile/>
+                <Layout hideIconsOnMobile />
               </ul>
             </div>
           </div>

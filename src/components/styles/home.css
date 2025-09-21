@@ -14,16 +14,16 @@
 }
 
 .homeTitle {
-  font-size: clamp(28px, 8vw, 75px);
+  font-size: clamp(20px, 6vw, 75px);
 }
 
 .job {
-  font-size: clamp(24px, 5vw, 40px);
+  font-size: clamp(20px, 3vw, 40px);
   font-weight: bold;
 }
 
 .description {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(13px, 2vw, 16px);
   max-width: 900px;
   margin-top: 30px;
 }
@@ -35,7 +35,7 @@
   background-image: url("https://avatars.githubusercontent.com/u/109898313?v=4");
   background-size: cover;
   background-position: center;
-  margin-top: clamp(100px, 15vh, 300px);
+  margin-top: clamp(40px, 5vh, 300px);
   margin-left: clamp(50px, 8vh, 250px);
 }
 
@@ -43,11 +43,13 @@
   .homeWrapper {
     flex-direction: column;
     align-items: center;
+    margin: 0;
   }
   .profilePhoto {
-    min-width: 200px;
-    min-height: 200px;
-    margin-bottom: -100px;
+    min-width: 150px;
+    min-height: 150px;
+    margin-bottom: -60px;
+    margin-right: 50px;
   }
 }
 
