@@ -46,7 +46,7 @@ export default function Layout({ children, hideIconsOnMobile = false}) {
           </a>
         </div>
         <button
-          className="w-5 h-16 p-2 flex items-center justify-center"
+          className={`${hideIconsOnMobile ? "flex" : "hidden md:flex"} w-5 h-16 p-2 items-center justify-center`}
           onClick={toggleTheme}
         >
           {theme === "dark" ? <Moon /> : <Sun />}
