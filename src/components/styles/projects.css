@@ -1,20 +1,66 @@
-.projectContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 32px;
-    gap: 48px;
+.projectsContainer {
+  padding: 20px;
+  min-height: 100vh;
 }
 
-.projectTitle{
-    font-size: 40px;
-    margin-bottom: 30px;
-    text-align: center;
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-.projectGrid{
-    display: flex;
-    flex-direction: wrap;
-    justify-content: center;
-    gap: 35px;
+.projectCard {
+  flex: 0 0 48%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #0c3753b3;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+.projectImage {
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+}
+
+.projectContent {
+  padding: 15px;
+}
+
+.projectName {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #64748b;
+}
+
+.projectDescription {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.projectButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  color: #ffff;
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    flex: 0 0 100%;
+  }
 }
