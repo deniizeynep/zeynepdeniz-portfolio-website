@@ -30,7 +30,8 @@ export default function Projects() {
     },
     {
       name: "Books Listing App",
-      description: "This app lists the top 10 most read books in the world and provides information about them. It was made using React Native and CSS.",
+      description:
+        "This app lists the top 10 most read books in the world and provides information about them. It was made using React Native and CSS.",
       image: "/images/BooksListingApp.png",
       demoUrl: "",
       githubRepo:
