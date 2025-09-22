@@ -35,8 +35,8 @@
   background-image: url("https://avatars.githubusercontent.com/u/109898313?v=4");
   background-size: cover;
   background-position: center;
-  margin-top: clamp(40px, 5vh, 300px);
-  margin-left: clamp(50px, 8vh, 250px);
+  margin-top: 180px;
+  margin-left: 130px;
 }
 
 @media (max-width: 1300px) {
@@ -48,8 +48,7 @@
   .profilePhoto {
     min-width: 150px;
     min-height: 150px;
-    margin-bottom: -60px;
-    margin-right: 50px;
+    margin: 40px 130px -60px 0;
   }
 }
 
