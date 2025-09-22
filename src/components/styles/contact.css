@@ -1,13 +1,13 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
+
 .title {
   font-size: 30px;
-  margin: 15px;
+  margin: 15px 0;
 }
 
 .input-container {
@@ -16,7 +16,8 @@
   width: 200px;
 }
 
-.input-container input[type="text"] {
+.input-container input,
+.input-container textarea {
   font-size: 20px;
   width: 100%;
   border: none;
@@ -24,23 +25,38 @@
   padding: 5px 0;
   background-color: transparent;
   outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-container textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 .input-container .label {
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.3s ease;
   pointer-events: none;
+  transition: all 0.3s ease;
 }
 
-.input-container input[type="text"]:focus ~ .label,
-.input-container input[type="text"]:valid ~ .label {
+.input-container input:focus ~ .label,
+.input-container input:valid ~ .label,
+.input-container textarea:focus ~ .label,
+.input-container textarea:valid ~ .label {
   top: -20px;
 }
 
-.input-container input[type="text"]:focus ~ .underline,
-.input-container input[type="text"]:valid ~ .underline {
+.input-container .underline {
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.input-container input:focus ~ .underline,
+.input-container input:valid ~ .underline,
+.input-container textarea:focus ~ .underline,
+.input-container textarea:valid ~ .underline {
   transform: scaleX(1);
 }
 
@@ -49,12 +65,13 @@
   border-radius: 12px;
   font-weight: 600;
   transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .success {
   position: relative;
-  background: #E9F5CE; 
-  color: #000;     
+  background: #e9f5ce;
+  color: #000;
   padding: 12px 40px 12px 16px;
   border-radius: 8px;
   margin-top: 40px;

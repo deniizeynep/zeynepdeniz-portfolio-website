@@ -63,7 +63,12 @@ export default function Contact() {
           <div class="underline"></div>
         </div>
         <div class="input-container">
-          <input type="text" id="input" name="message" required />
+          <textarea
+            id="message"
+            name="message"
+            required
+            className="text-input"
+          ></textarea>
           <label for="input" class="label">
             Your Messagge
           </label>
