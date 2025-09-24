@@ -41,7 +41,7 @@ export default function Contact() {
       <div className="container text-black dark:text-white duration-500">
         <div className="title ">Contact Form</div>
         <div class="input-container ">
-          <input type="text" id="input" name="user_name" required />
+          <input type="text" id="input" name="from_name" required />
           <label for="input" class="label">
             Full Name
           </label>
@@ -49,7 +49,7 @@ export default function Contact() {
         </div>
 
         <div class="input-container">
-          <input type="text" id="input" name="user_email" required />
+          <input type="text" id="input" name="from_email" required />
           <label for="input" class="label">
             Email Address
           </label>

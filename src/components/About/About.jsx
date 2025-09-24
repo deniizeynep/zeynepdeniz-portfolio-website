@@ -47,6 +47,7 @@ export default function About() {
               <li className="skills">JavaScript</li>
               <li className="skills">React</li>
               <li className="skills">Bootstrap</li>
+              <li className="skills">React Native</li>
             </div>
           </div>
           <div>
