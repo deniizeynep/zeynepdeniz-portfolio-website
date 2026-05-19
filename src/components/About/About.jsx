@@ -20,7 +20,7 @@ export default function About() {
             <span className="ticket">
               <TimeIcon /> Age
             </span>
-            <span className="ticketDescription">22</span>
+            <span className="ticketDescription">23</span>
           </div>
           <div className="ticketContainer">
             <span className="ticket">
@@ -81,6 +81,12 @@ export default function About() {
             <div className="timePeriod">Oct 2022 - Jul 2024</div>
             <div className="company">
               Afyon Kocatepe University - Computer Programming
+            </div>
+          </div>
+           <div className="mt-10">
+            <div className="timePeriod">Oct 2025 - June 2027</div>
+            <div className="company">
+              Selcuk University - Management Information Systems
             </div>
           </div>
         </div>

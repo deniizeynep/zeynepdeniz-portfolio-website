@@ -37,6 +37,20 @@ export default function Projects() {
       githubRepo:
         "https://github.com/deniizeynep/books-listing-app?tab=readme-ov-file",
     },
+    {
+      name: "AgroPulse",
+      description: "Ensure your plants thrive with AgroPulse, a smart pot monitoring system that delivers real-time moisture and temperature data directly to your mobile app.",
+      image: "/images/AgroPulse.png",
+      demoUrl: "",
+      githubRepo: "https://github.com/deniizeynep/agropulse-app.git"
+    },
+    {
+      name: "Stock Tracking System App",
+      description: "Empower your business inventory management with our Stock Tracking System, a robust and user-friendly solution featuring a modern interface built on the Avalonia framework.",
+      image: "/images/StockTrackingApp.png",
+      demoUrl: "",
+      githubRepo: "https://github.com/deniizeynep/stock-tracking-system.git"
+    }
   ];
   return (
     <div className="projectsContainer text-black dark:text-white">

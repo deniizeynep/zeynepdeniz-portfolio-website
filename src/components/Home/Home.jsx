@@ -4,7 +4,7 @@ import "../styles/home.css";
 export default function Home() {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/ZeynepDenizResume.pdf";
+    link.href = "/ZeynepDenizCV.pdf";
     link.setAttribute("download", "ZeynepDenizCV.pdf");
     document.body.appendChild(link);
     link.click();
